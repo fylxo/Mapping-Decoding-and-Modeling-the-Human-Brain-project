@@ -32,7 +32,7 @@ This portfolio presents a comprehensive exploration of fMRI data analysis, focus
 
 ## Dataset
 
-All projects are based on the **Haxby et al. (2001)** dataset, providing a consistent framework to compare and contrast various analysis approaches.
+All projects are based on the **Haxby et al. (2001)** dataset (downloaded from http://data.pymvpa.org/datasets/haxby2001/), providing a consistent framework to compare and contrast various analysis approaches.
 
 ## Methods and Goals
 
