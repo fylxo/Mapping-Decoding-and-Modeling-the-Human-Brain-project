@@ -6,7 +6,7 @@ clear; close all; clc;
 
 %% ===== CONFIGURATION =====
 subject_ids = [1, 2];  % Analyzing 2 subjects
-hrf_path = 'hrf.mat';
+hrf_path = '../hrf.mat';
 
 fprintf('=== Multi-Subject Analysis (%d subjects) ===\n', length(subject_ids));
 
@@ -21,11 +21,11 @@ for s = 1:length(subject_ids)
     fprintf('\n--- Processing Subject %d ---\n', subject_id);
 
     % Define paths
-    bold_path = sprintf('subj%d/bold.nii.gz', subject_id);
-    labels_path = sprintf('subj%d/labels.txt', subject_id);
-    mask_vt_path = sprintf('subj%d/mask4_vt.nii.gz', subject_id);
-    mask_face_path = sprintf('subj%d/mask8_face_vt.nii.gz', subject_id);
-    mask_house_path = sprintf('subj%d/mask8_house_vt.nii.gz', subject_id);
+    bold_path = sprintf('../subj%d/bold.nii.gz', subject_id);
+    labels_path = sprintf('../subj%d/labels.txt', subject_id);
+    mask_vt_path = sprintf('../subj%d/mask4_vt.nii.gz', subject_id);
+    mask_face_path = sprintf('../subj%d/mask8_face_vt.nii.gz', subject_id);
+    mask_house_path = sprintf('../subj%d/mask8_house_vt.nii.gz', subject_id);
 
     %% Load data
     fprintf('Loading BOLD data...\n');

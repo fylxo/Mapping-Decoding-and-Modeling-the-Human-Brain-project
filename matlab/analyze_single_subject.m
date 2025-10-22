@@ -7,12 +7,12 @@ clear; close all; clc;
 
 %% ===== CONFIGURATION =====
 subject_id = 1;  % Change to 2 for second subject
-bold_path = sprintf('subj%d/bold.nii.gz', subject_id);
-labels_path = sprintf('subj%d/labels.txt', subject_id);
-mask_vt_path = sprintf('subj%d/mask4_vt.nii.gz', subject_id);
-mask_face_path = sprintf('subj%d/mask8_face_vt.nii.gz', subject_id);
-mask_house_path = sprintf('subj%d/mask8_house_vt.nii.gz', subject_id);
-hrf_path = 'hrf.mat';
+bold_path = sprintf('../subj%d/bold.nii.gz', subject_id);
+labels_path = sprintf('../subj%d/labels.txt', subject_id);
+mask_vt_path = sprintf('../subj%d/mask4_vt.nii.gz', subject_id);
+mask_face_path = sprintf('../subj%d/mask8_face_vt.nii.gz', subject_id);
+mask_house_path = sprintf('../subj%d/mask8_house_vt.nii.gz', subject_id);
+hrf_path = '../hrf.mat';
 
 fprintf('=== Analyzing Subject %d ===\n', subject_id);
 

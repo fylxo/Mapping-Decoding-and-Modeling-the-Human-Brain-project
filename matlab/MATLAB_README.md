@@ -28,25 +28,32 @@ project/
 ├── subj2/
 │   ├── (same files)
 ├── hrf.mat
-└── (MATLAB scripts)
+└── matlab/
+    ├── analyze_single_subject.m
+    ├── analyze_multiple_subjects.m
+    ├── (all other .m files)
+    └── MATLAB_README.md
 ```
 
 ## Quick Start
 
 ### Single-Subject Analysis
 ```matlab
-% Open MATLAB and navigate to the project directory
-cd /path/to/your/project
+% Open MATLAB and navigate to the matlab folder
+cd /path/to/your/project/matlab
 
 % Run single-subject analysis
 analyze_single_subject  % Analyzes subject 1 by default
 
-% To analyze subject 2, edit line 7 in analyze_single_subject.m:
+% To analyze subject 2, edit line 9 in analyze_single_subject.m:
 % subject_id = 2;
 ```
 
 ### Multi-Subject Analysis (2 subjects)
 ```matlab
+% Navigate to the matlab folder
+cd /path/to/your/project/matlab
+
 % Run group-level analysis
 analyze_multiple_subjects  % Automatically analyzes subjects 1 and 2
 ```
@@ -146,11 +153,11 @@ analyze_multiple_subjects  % Automatically analyzes subjects 1 and 2
 %% Example: Complete pipeline for 2 subjects
 
 % Step 1: Analyze Subject 1
-cd /path/to/project
+cd /path/to/project/matlab
 analyze_single_subject  % Default: subject_id = 1
 
 % Step 2: Edit analyze_single_subject.m to analyze Subject 2
-% Change line 7: subject_id = 2;
+% Change line 9: subject_id = 2;
 analyze_single_subject
 
 % Step 3: Run group analysis
@@ -175,12 +182,12 @@ group_results.group_sem_psc.Face
 ## Customization
 
 ### Analyze Different Subjects
-Edit `analyze_single_subject.m` line 7:
+Edit `analyze_single_subject.m` line 9:
 ```matlab
 subject_id = 3;  % Change to desired subject
 ```
 
-Edit `analyze_multiple_subjects.m` line 6:
+Edit `analyze_multiple_subjects.m` line 8:
 ```matlab
 subject_ids = [1, 2, 3, 4];  % Add more subjects
 ```
